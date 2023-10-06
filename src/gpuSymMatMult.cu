@@ -41,7 +41,6 @@ int gpuSymMatMult::set_matrix(int rank, size_t g_col_start, size_t n_rows, size_
     std::cout << "[" << rank << "] "
               << "A in nvcc = " << A << std::endl;
 
-/*
     cudaStat = cudaSetDevice(rank);
     if (cudaStat != cudaSuccess) {
         std::cerr << "[" << rank << "] "
@@ -49,7 +48,7 @@ int gpuSymMatMult::set_matrix(int rank, size_t g_col_start, size_t n_rows, size_
         ret = EXIT_FAILURE;
         goto out;
     }
-*/
+/*
     cudaStat = cudaGetDevice(&device_id);
     if (cudaStat != cudaSuccess) {
         std::cerr << "[" << rank << "] "
@@ -57,7 +56,7 @@ int gpuSymMatMult::set_matrix(int rank, size_t g_col_start, size_t n_rows, size_
         ret = EXIT_FAILURE;
         goto out;
     }
-
+*/
     std::cout << "[" << rank << "] "
               << "GPU ID: " << device_id << std::endl;
 
